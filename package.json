@@ -1,0 +1,29 @@
+{
+  "name": "react-scripts-webpack-config",
+  "version": "0.0.1",
+  "bin": "./bin/react-scripts-wrapper.js",
+  "description": "Don't let facebook babysit you forever, customize the webpack config！",
+  "main": "index.js",
+  "dependencies": {
+    "react-scripts": "^1.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facetothefate/react-scripts-webpack-config.git"
+  },
+  "keywords": [
+    "webpack",
+    "config",
+    "create-react-app"
+  ],
+  "author": "Zhifei Fang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facetothefate/react-scripts-webpack-config/issues"
+  },
+  "homepage": "https://github.com/facetothefate/react-scripts-webpack-config#readme"
+}
