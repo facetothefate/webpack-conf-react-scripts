@@ -4,9 +4,9 @@ This is a react-scripts wrapper, which will give you functionality to custmize r
 
 ## How to use
 
-Firstly follow create-react-app instruction to create your app.
+Firstly follow <a href="https://github.com/facebook/create-react-app">create-react-app</a> instruction to create your app.
 
-Or directly go under your project root.
+Or directly cd to your create-react-app created project root.
 
 Then
 
@@ -14,15 +14,15 @@ Then
 npm install webpack-conf-react-scripts --save-dev
 ```
 
-Then Create 3 files under your project root
+Then create 3 files under your project root
 
 - webpack.config.common.js  // this contains config will be merged to both dev and prod config
 - webpack.config.dev.js  // this contains config will only be merged to dev config
 - webpack.config.prod.js // this contains config will only be merged to prod config
 
-Follow webpack instruction to add the config you need.
+Follow <a href = "https://webpack.js.org/configuration/">webpack</a> instruction to add the config you need.
 
-For example you need a copy plguin copy something
+For example, you need add a copy plguin to react-scripts webpack config
 
 ```js
 
