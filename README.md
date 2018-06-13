@@ -1,4 +1,4 @@
-# react-scripts-webpack-config
+# webpack-conf-react-scripts
 
 This is a react-scripts wrapper, which will give you functionality to custmize react-scripts's webpack configuration
 
@@ -11,7 +11,7 @@ Or directly go under your project root.
 Then
 
 ```
-npm install react-scripts-webpack-config --save-dev
+npm install webpack-conf-react-scripts --save-dev
 ```
 
 Then Create 3 files under your project root
@@ -45,7 +45,7 @@ module.exports = {
 
 ```
 
-react-scripts-webpack-config will try to merge your config to existing react-scripts ones.
+webpack-conf-react-scripts will try to merge your config to existing react-scripts ones.
 
 It will concat all array config field, and override other type of fields. 
 
@@ -53,10 +53,10 @@ if you wish to use it with npm scripts, modify your package.json like:
 
 ```json
   "scripts": {
-    "start": "react-scripts-webpack-config start",
-    "build": "react-scripts-webpack-config build",
-    "test": "react-scripts-webpack-config test --env=jsdom",
-    "eject": "react-scripts-webpack-config eject"
+    "start": "webpack-conf-react-scripts start",
+    "build": "webpack-conf-react-scripts build",
+    "test": "webpack-conf-react-scripts test --env=jsdom",
+    "eject": "webpack-conf-react-scripts eject"
   }
 ```
 
