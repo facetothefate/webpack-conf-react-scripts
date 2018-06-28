@@ -1,6 +1,6 @@
 {
   "name": "webpack-conf-react-scripts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": "./bin/react-scripts-wrapper.js",
   "description": "Don't let facebook babysit you forever, customize the webpack config！",
   "dependencies": {
