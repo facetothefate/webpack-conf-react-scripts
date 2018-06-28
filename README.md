@@ -4,6 +4,8 @@ This is a react-scripts wrapper, which will give you functionality to custmize r
 
 ## How to use
 
+### Webpack config file
+
 Firstly follow <a href="https://github.com/facebook/create-react-app">create-react-app</a> instruction to create your app.
 
 Or directly cd to your create-react-app created project root.
@@ -60,6 +62,8 @@ if you wish to use it with npm scripts, modify your package.json like:
   }
 ```
 
-### --entry -e
+### Arguments 
+
+#### --entry -e
 
 Use this argument to provide another entry point file in your src folder, this will override the default setting "src/index.js"
