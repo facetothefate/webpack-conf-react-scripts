@@ -60,3 +60,6 @@ if you wish to use it with npm scripts, modify your package.json like:
   }
 ```
 
+### --entry -e
+
+Use this argument to provide another entry point file in your src folder, this will override the default setting "src/index.js"

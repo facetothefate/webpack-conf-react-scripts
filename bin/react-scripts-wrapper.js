@@ -20,6 +20,15 @@ const scriptIndex = args.findIndex(
 const script = scriptIndex === -1 ? args[0] : args[scriptIndex];
 const nodeArgs = scriptIndex > 0 ? args.slice(0, scriptIndex) : [];
 
+const entryIndex = args.findIndex(
+    x => x === '--entry' || x === '-e'
+);
+
+let entryPoint = null;
+
+if (entryIndex !== -1 && entryIndex + 1 < args.length) {
+    entryPoint = args[entryIndex + 1];
+}
 
 function mergeConfig(origin, override) {
     return mergeObject(origin, override);
@@ -30,7 +39,7 @@ function mergeObject(origin, override) {
         if (key in origin) {
             if (Array.isArray(origin[key])) {
                 origin[key] = mergeArray(origin[key], override[key]);
-            } else if (origin.key && typeof origin[key] === 'object') {
+            } else if (origin[key] && typeof origin[key] === 'object') {
                 origin[key] = mergeObject(origin[key], override[key]);
             } else {
                 origin[key] = override[key];
@@ -53,6 +62,17 @@ function mergeArray(origin, override) {
 */
 
 Module.prototype.require = function hijackedRequire(file) {
+    if (file.indexOf('./paths') !== -1) {
+        console.log(file);
+        const paths = oldRequire.apply(this, arguments);
+        if ('appIndexJs' in paths) {
+            console.log(paths.appIndexJs);
+            if (entryPoint) {
+                paths.appIndexJs = path.resolve(`${__dirname}`, entryPoint);
+            }
+        }
+        return paths;
+    }
     if (file.indexOf('webpack.config') !== -1) {
         let config = oldRequire.apply(this, arguments);
         mergeConfig(config, overrideConfig);
