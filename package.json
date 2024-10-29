@@ -4,7 +4,7 @@
   "bin": "./bin/react-scripts-wrapper.js",
   "description": "Don't let facebook babysit you forever, customize the webpack config！",
   "dependencies": {
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {},
   "scripts": {
